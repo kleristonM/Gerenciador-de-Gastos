@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerenciador de Gastos">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciador de Gastos</title>
+</head>
+<body>
+    <main>
+        <header>
+          <h1>Gerenciador de Gastos</h1>
+        </header>
+        
+        <picture class="wallet-picture">
+          <img src="https://img.freepik.com/vetores-premium/carteira-com-dinheiro-e-pilha-de-moedas-de-ouro-vector-icon-ilustracao_138676-359.jpg?w=2000" alt="Carteira">
+          
+          <span id="wallet-button" class="wallet-button">R$ <span id="wallet">0</span></span>
+        </picture>
+        
+        <section>
+          <ul class="flex">
+            <li>
+              <h3>Comida</h3>
+              <button id="comida">
+                <img src="https://img.freepik.com/fotos-gratis/variedade-plana-com-deliciosa-comida-brasileira_23-2148739179.jpg?w=2000" alt="Comida">
+              </button>
+            </li>
+            <li>
+              <h3>Brinquedo</h3>
+              <button id="brinquedo">
+                <img src="https://superlegalbrinquedos.vteximg.com.br/arquivos/ids/210952-800-800/1-Brinquedo-Musical---DJ-Bouncy-Pular-e-Aprender---Fisher-Price.jpg?v=638048213526230000" alt="Briquedo">
+              </button>
+            </li>
+            <li>
+              <h3>Circo</h3>
+              <button id="circo">
+                <img src="https://www.brgadvogados.com.br/wp-content/uploads/2019/01/circo-gospel.jpg" alt="Circo">
+              </button>
+            </li>
+          </ul>
+        </section>
+        <footer>
+          <button id="go-extrato">Extrato</button>
+          <button onclick="location.reload()" id="reset">Recomeçar</button>
+        </footer>
+      </main>
+      <script src="app.js" type="module"></script>
+</body>
+</html>
