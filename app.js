@@ -23,7 +23,9 @@ let extrato = " ";
 // definir o valor que cada item custa
 const comida = 18.00; 
 const circo = 15.00; 
-const brinquedo = 13.00; 
+const brinquedo = 13.00;
+
+let listaDoExtrato = []
 
 
 // incluir o valor informado para gastos na carteira
@@ -40,6 +42,12 @@ onEvent("comida","click", () =>{
         walletColorRed();
         alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
+    let transacao = {
+        nome: "comida",
+        valor: 18,
+        data: new Date()
+    };
+    listaDoExtrato.push(transacao);
 });
 onEvent("brinquedo","click", () => {
     carteira -= brinquedo;
@@ -50,6 +58,12 @@ onEvent("brinquedo","click", () => {
         walletColorRed();
         alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
+    let transacao = {
+        nome: "brinquedo",
+        valor: 13,
+        data: new Date()
+    };
+    listaDoExtrato.push(transacao);
 });
 onEvent("circo","click", () => {
     carteira -= circo; 
@@ -60,7 +74,14 @@ onEvent("circo","click", () => {
         walletColorRed();
         alert("ATENÇAO! Você atingiu seu limite de gastos");
     }
+    let transacao = {
+        nome: "circo",
+        valor: 15,
+        data: new Date()
+    };
+    listaDoExtrato.push(transacao);
 });
+console.log(listaDoExtrato);
 
 
 // quando clicar no botão EXTRATO ele vai abrir uma caixa de alerta listando os gastos e informando quando tem de saldo e qual o valor definido como economia.
